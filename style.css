@@ -1,0 +1,36 @@
+
+#bounce{
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    animation: bounc 3s ease-in-out alternate infinite;
+    animation-fill-mode: forwards;
+}
+@keyframes bounc{
+    to {
+        transform: translateY(100px);
+    }
+}
+
+#blobs{
+    overflow: hidden;
+    border-radius: 42% 56% 72% 28% / 43% 45% 56% 48%;
+    background: url('images/images.jpg') no-repeat center center/cover;
+    box-shadow: 0 0 0px rgb(2, 82, 2),
+                0 0 20px rgb(2, 82, 2),
+                0 0 40px rgb(2, 82, 2);  
+    animation: blob 4.5s linear infinite;     
+}
+@keyframes blob {
+    0%, 100%{
+        border-radius: 42% 56% 72% 28% / 43% 45% 56% 48%;
+        
+    }
+    33%{
+        border-radius: 42% 28% 48% 48% / 28% 28% 72% 72%;
+    }
+    66%{
+        border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%;
+    }
+}
+
